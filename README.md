@@ -19,8 +19,8 @@ uniprot_sprot_HUMAN_160504.fasta \
 exp.list \
 markers.txt \
 . \
-DMSO_ \
-EXP_
+'-UDP_' \
+'+UDP_' > log.txt
 ```
 Options explanation:
 ```
@@ -31,4 +31,8 @@ Options explanation:
     prefix of the first sample
     prefix of the second sample
     ...
+```
+Output final results:
+```python
+grep 'STAT' log.txt > stoichiometry.txt
 ```
